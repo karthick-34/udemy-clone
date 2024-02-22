@@ -13,8 +13,12 @@ body {
     padding: 20px;
     justify-content: space-between;
     gap: 10px;
-    box-shadow: 0px 3px #88888821;
+    box-shadow: 0px 3px #ebe7e76b;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
 }
 
 .navbar__s1 {
@@ -57,6 +61,25 @@ body {
     cursor: pointer;
 }
 
+.mylearning {
+    position: relative;
+}
+
+.mylearning__popup {
+    position: absolute;
+    background-color: white;
+    border: solid black 1px;
+    z-index: 2;
+    margin-top: 10px;
+    display: none;
+    width: 130px;
+    padding: 15px;
+}
+
+.mylearning:hover .mylearning__popup {
+    display: block;
+}
+
 .categories {
     display: flex;
     justify-content: space-around;
@@ -79,8 +102,33 @@ body {
 
 .section-image img {
     width: 100%;
-
 }
+
+.section-image {
+    position: relative;
+}
+
+.section-image__description {
+    background-color: white;
+    width: 33%;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.106);
+    position: absolute;
+    padding: 20px;
+    top: 80px;
+    left: 50px;
+}
+
+.section-image__description h2 {
+    font-size: 43px;
+    font-family: "Lora", serif;
+}
+
+.section-image__description p {
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: "Dosis", sans-serif;
+}
+
 
 .recommended {
     padding: 20px;
@@ -165,12 +213,14 @@ body {
 .footer__one__s2 p {
     margin-top: 20px;
 }
+
 .footer__one__s1 p:hover,
-.footer__one__s2 p:hover{
+.footer__one__s2 p:hover {
     cursor: pointer;
     text-decoration: underline;
 }
-.footer__two{
+
+.footer__two {
     display: flex;
     justify-content: space-between;
 }
