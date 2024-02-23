@@ -60,6 +60,9 @@ body {
 .navbar__s3 i:hover {
     cursor: pointer;
 }
+.navbar__s4{
+    display: none;
+}
 
 .mylearning {
     position: relative;
@@ -113,9 +116,9 @@ body {
     width: 33%;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.106);
     position: absolute;
-    padding: 20px;
-    top: 80px;
-    left: 50px;
+    padding: 2%;
+    top: 10%;
+    left: 10%;
 }
 
 .section-image__description h2 {
@@ -142,8 +145,9 @@ body {
 }
 
 .courses-card {
-    width: 300px;
-    margin-top: 40px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 10px;
 }
 
 .courses-card img {
@@ -178,7 +182,6 @@ body {
 
 .topics-container p:hover {
     cursor: pointer;
-    transform: scale(1.1);
 }
 
 .popular {
@@ -223,4 +226,38 @@ body {
 .footer__two {
     display: flex;
     justify-content: space-between;
+}
+
+
+/* Media Queries */
+@media screen and (max-width:900px) {
+    .section-image__description {
+        display: none;
+    }
+}
+
+@media screen and (max-width:800px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    .courses-card {
+        flex-basis: 40%;
+    }
+
+    .categories,.navbar__s2,.navbar__s3 {
+        display: none;
+    }
+
+    .navbar__s4{
+        display: inline;
+        font-size: 20px;
+    }
+    .navbar__s4:hover{
+        cursor: pointer;
+    }
+    
 }
